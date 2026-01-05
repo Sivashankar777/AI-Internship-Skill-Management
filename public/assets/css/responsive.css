@@ -1,0 +1,301 @@
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    .glass-card,
+    .card-3d {
+        padding: var(--space-md);
+        margin: 0 var(--space-sm);
+    }
+    
+    .btn {
+        padding: var(--space-sm) var(--space-lg);
+        width: 100%;
+        margin-bottom: var(--space-sm);
+    }
+    
+    .navbar-brand {
+        font-size: 1.4rem;
+    }
+    
+    .main-content {
+        padding-top: 70px;
+    }
+    
+    .form-control, .form-select {
+        padding: var(--space-sm);
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    h1 {
+        font-size: 3rem;
+    }
+    
+    .container {
+        max-width: 540px;
+    }
+    
+    .glass-card,
+    .card-3d {
+        padding: var(--space-lg);
+    }
+    
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .navbar-nav .nav-item {
+        margin: 0 var(--space-xs);
+    }
+    
+    .card-3d {
+        padding: var(--space-lg);
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    /* Enhanced desktop styles */
+    .glass-nav {
+        padding: var(--space-lg) 0;
+    }
+    
+    .main-content {
+        padding-top: 100px;
+    }
+}
+
+/* High-DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .glass-nav,
+    .glass-card,
+    .card-3d {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+}
+
+/* Print Styles */
+@media print {
+    .glass-nav,
+    .glass-footer,
+    .btn {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .glass-card,
+    .card-3d {
+        background: white !important;
+        border: 1px solid #ddd !important;
+        box-shadow: none !important;
+    }
+    
+    a {
+        color: black !important;
+        text-decoration: underline !important;
+    }
+}
+
+/* Dark Mode Adjustments */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-dark: #0a0a0a;
+        --bg-darker: #050505;
+    }
+    
+    body {
+        background-image: 
+            radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 25%),
+            radial-gradient(circle at 90% 80%, rgba(168, 85, 247, 0.1) 0%, transparent 25%);
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .floating,
+    .pulse,
+    .rotate,
+    .typewriter {
+        animation: none !important;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .card-3d:hover {
+        transform: none !important;
+    }
+    
+    .btn-primary:hover,
+    .btn-outline-light:hover {
+        transform: none !important;
+    }
+    
+    .nav-link:hover {
+        background: transparent !important;
+    }
+    
+    /* Increase touch target sizes */
+    .btn,
+    .nav-link,
+    .form-control,
+    .form-select {
+        min-height: 44px;
+    }
+    
+    input,
+    select,
+    textarea {
+        font-size: 16px; /* Prevents iOS zoom on focus */
+    }
+}
+
+/* Landscape Mode */
+@media (max-height: 600px) and (orientation: landscape) {
+    .navbar {
+        position: static;
+    }
+    
+    .main-content {
+        padding-top: 60px;
+        min-height: auto;
+    }
+    
+    .glass-footer {
+        position: static;
+    }
+}
+
+/* Very Small Screens */
+@media (max-width: 320px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Foldable Devices */
+@media (min-width: 320px) and (max-width: 359px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* Tablet Portrait Optimization */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .navbar-collapse {
+        background: var(--bg-dark);
+        padding: var(--space-md);
+        border-radius: var(--radius-lg);
+        margin-top: var(--space-sm);
+    }
+}
+
+/* Large Screen Optimization */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1500px;
+    }
+    
+    h1 {
+        font-size: 4rem;
+    }
+    
+    h2 {
+        font-size: 3rem;
+    }
+    
+    .glass-card,
+    .card-3d {
+        padding: var(--space-2xl);
+    }
+}
+
+/* Grid Adjustments for Mobile */
+@media (max-width: 768px) {
+    .row {
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+    
+    .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9 {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+/* Form Optimization for Mobile */
+@media (max-width: 576px) {
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .form-row .col {
+        width: 100%;
+        margin-bottom: var(--space-sm);
+    }
+}
+
+/* Card Grid Optimization */
+@media (max-width: 992px) {
+    .card-deck {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .card-deck .card {
+        margin-bottom: var(--space-lg);
+    }
+}

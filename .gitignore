@@ -1,0 +1,31 @@
+# Environment and credentials
+app/config/config.php
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-*
+
+# Test files (don't commit to production)
+test_*.php
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Dependencies (if using composer later)
+vendor/
+
+# iPage specific deployment files
+ipage.htaccess
+
+# Database dumps (sensitive)
+*.sql
+
+# Backup files
+*.bak
+*.backup
