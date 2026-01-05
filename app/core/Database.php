@@ -34,4 +34,12 @@ class Database {
     public function lastInsertId() {
         return $this->pdo->lastInsertId();
     }
+    
+    public function getConnection() {
+        return $this->pdo;
+    }
+    
+    public function prepare($sql) {
+        return $this->pdo->prepare($sql);
+    }
 }
